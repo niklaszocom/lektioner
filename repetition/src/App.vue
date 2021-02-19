@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <DataOchVBind />
-    <ComputedProperties />
-    <IfShow />
-    <ForLoop />
-    <ParentComponent />
-    <VModel />
+    <div style="display: none">
+      <DataOchVBind />
+      <ComputedProperties />
+      <IfShow />
+      <ForLoop />
+      <ParentComponent />
+      <VModel />
+      <button @click="display = !display">klicka här</button>
+      <LifeCycleHooks v-if="display" />
+      <ParentMount />
+    </div>
+
+    <ParentSass />
+
   </div>
 </template>
 
@@ -15,7 +23,10 @@ import ComputedProperties from './components/ComputedProperties.vue'
 import DataOchVBind from './components/DataOchVBind.vue'
 import ForLoop from './components/ForLoop.vue'
 import IfShow from './components/IfShow.vue'
+import LifeCycleHooks from './components/LifeCycleHooks.vue'
 import ParentComponent from './components/ParentComponent.vue'
+import ParentMount from './components/ParentMount.vue'
+import ParentSass from './components/ParentSass.vue'
 import VModel from './components/VModel.vue'
 
 export default {
@@ -26,7 +37,17 @@ export default {
     IfShow,
     ForLoop,
     ParentComponent,
-    VModel
+    VModel,
+    LifeCycleHooks,
+    ParentMount,
+    ParentSass
+  },
+  data: function(){
+
+    return {
+
+      display: false
+    }
   }
 }
 </script>
