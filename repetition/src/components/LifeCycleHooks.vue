@@ -28,6 +28,8 @@ export default {
 
         console.log("created");
         console.log(this.firstName);
+
+        this.fullName = this.firstName + ' ' + this.lastName;
     },
     beforeMount: function(){
 
@@ -68,15 +70,16 @@ export default {
 
             firstName: 'Niklas'
             , lastName: 'Holmström'
+            , fullName: null
         }
     },
-    computed: {
+    // computed: {
 
-        fullName: function(){
+    //     fullName: function(){
 
-            return this.firstName + ' ' + this.lastName;
-        }
-    },
+    //         return this.firstName + ' ' + this.lastName;
+    //     }
+    // },
     methods: {
 
         onClick: function(){

@@ -8,12 +8,13 @@
       <ForLoop />
       <ParentComponent />
       <VModel />
-      <button @click="display = !display">klicka här</button>
-      <LifeCycleHooks v-if="display" />
+     
       <ParentMount />
+      <ParentSass />
     </div>
-
-    <ParentSass />
+    <button @click="display = !display">klicka här</button>
+    <LifeCycleHooks v-if="display" />
+    
 
   </div>
 </template>
